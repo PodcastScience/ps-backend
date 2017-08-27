@@ -39,7 +39,9 @@ class ImagesController < ApplicationController
 		auth= {
 			host: ENV["WP_HOST"],
 			username: ENV["WP_USER"], 
-			password: ENV["WP_PW"]
+			password: ENV["WP_PW"],
+			port: 443,
+			use_ssl: true
 		}
 
 		wp = Rubypress::Client.new	auth
