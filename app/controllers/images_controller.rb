@@ -109,7 +109,9 @@ class ImagesController < ApplicationController
 		auth= {
 			host: ENV["WP_HOST"],
 			username: ENV["WP_USER"], 
-			password: ENV["WP_PW"]
+			password: ENV["WP_PW"],
+			port: 443,
+			use_ssl: true
 		}
 		content_type=params[:file].content_type
 		@episode = Episode.find params[:id]
